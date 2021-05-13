@@ -4,12 +4,14 @@ import app from "../app";
 
 import apiRoutes from "./api";
 
-routes.use("/api", apiRoutes);
-routes.use("/", (req: Request, res: Response) => {
+
+routes.get("/", (req: Request, res: Response) => {
     res.json({
         success: true,
         mode: app.get("env")
     });
 });
+routes.use("/api", apiRoutes);
+
 
 export default routes;
