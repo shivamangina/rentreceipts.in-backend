@@ -21,7 +21,7 @@ export const template = (data: any[]) => {
         } 
 
         html{
-          zoom: 0.5;
+          zoom: 0.6;
         }
 
         @media print {
