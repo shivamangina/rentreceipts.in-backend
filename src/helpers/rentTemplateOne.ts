@@ -14,6 +14,7 @@ export const template = (data: any[]) => {
       </head>
   
       <style>
+        
         body {
           top: 0;
           left: 0;
@@ -48,7 +49,7 @@ export const template = (data: any[]) => {
           width:100%;
           min-width:100%;
           max-width:100%;
-          border:2px solid #392f5a;
+          border:2px solid #808080;
           margin-top:7mm;
           box-sizing:border-box;
           display:inline-block;
@@ -167,8 +168,8 @@ export const template = (data: any[]) => {
               </div>
 
               <div class="container-horizontal-two">
-                Received sum of INR Rs. <strong> ${dataItem.amount} </strong> from <strong> ${dataItem.tenantName}</strong> towards the rent of property
-                located at <strong> ${dataItem.address} </strong> for the period from <strong> ${dataItem.fromDate} </strong> to <strong> ${dataItem.toDate} </strong>
+                Received sum of ₹ <strong> ${dataItem.amount} </strong> from <strong> ${dataItem.tenantName}</strong> towards the rent of property
+                located at <strong> ${dataItem.address} </strong> for the period from <strong> ${dataItem.fromDate} </strong> to <strong> ${dataItem.toDate} </strong>.
               </div>
 
               <div class="container-horizontal-three">
