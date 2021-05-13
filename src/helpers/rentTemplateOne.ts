@@ -19,6 +19,10 @@ export const template = (data: any[]) => {
           left: 0;
         } 
 
+        html{
+          zoom: 0.7;
+        }
+
         @media print {
           .pagebreak-div {
               display:block;
