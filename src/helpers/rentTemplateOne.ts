@@ -1,4 +1,4 @@
-export const template = (data: any[]) => {
+export const template = (data: any[], env: any) => {
 
   return `
     <!DOCTYPE html>
@@ -18,11 +18,10 @@ export const template = (data: any[]) => {
         body {
           top: 0;
           left: 0;
-          font-size: 100%;
         } 
 
         html{
-          zoom: 0.6;
+          zoom : ${env == "PRODUCTION" ? "0.6" : ""} ;
         }
 
         @media print {
@@ -137,6 +136,11 @@ export const template = (data: any[]) => {
           font-family: Arial, Helvetica, sans-serif;
         }
 
+        .container-horizontal-three-vertical-one-three{
+          font-size:1.3rem;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
       </style>
   
       <body>
@@ -175,7 +179,10 @@ export const template = (data: any[]) => {
               <div class="container-horizontal-three">
                 <div class="container-horizontal-three-vertical-one">
                   <div class="container-horizontal-three-vertical-one-top">
-                    <strong> ${dataItem.landLordName}</strong>
+                    <strong> ${dataItem.landLordName}</strong> (LandLord)
+                  </div>
+                  <div class="container-horizontal-three-vertical-one-center">
+                     <strong> PAN No : ${dataItem.landLordPan}</strong> 
                   </div>
                   <div class="container-horizontal-three-vertical-one-bottom">
                     Signature : 

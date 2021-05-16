@@ -15,6 +15,7 @@ export const generatePdf = async (req: Request, res: Response) => {
         {
             tenantName: "Sandeep Kumar",
             landLordName: "Krishna Reddy",
+            landLordPan: "EKTYM5684P",
             panCard: "BGLRM0076S",
             aadharCard: "5600 2315 6987",
             address: "Blessed 70, Near Pragathi Sports Club, Anjappa Layout, B Narayanapura, Mahadevapura, Bengaluru, Karnataka, 560048",
@@ -28,6 +29,7 @@ export const generatePdf = async (req: Request, res: Response) => {
         {
             tenantName: "Sandeep Kumar",
             landLordName: "Krishna Reddy",
+            landLordPan: "EKTYM5684P",
             panCard: "BGLRM0076S",
             aadharCard: "5600 2315 6987",
             address: "Blessed 70, Near Pragathi Sports Club, Anjappa Layout, B Narayanapura, Mahadevapura, Bengaluru, Karnataka, 560048",
@@ -41,6 +43,7 @@ export const generatePdf = async (req: Request, res: Response) => {
         {
             tenantName: "Sandeep Kumar",
             landLordName: "Krishna Reddy",
+            landLordPan: "EKTYM5684P",
             panCard: "BGLRM0076S",
             aadharCard: "5600 2315 6987",
             address: "Blessed 70, Near Pragathi Sports Club, Anjappa Layout, B Narayanapura, Mahadevapura, Bengaluru, Karnataka, 560048",
@@ -54,6 +57,7 @@ export const generatePdf = async (req: Request, res: Response) => {
         {
             tenantName: "Sandeep Kumar",
             landLordName: "Krishna Reddy",
+            landLordPan: "EKTYM5684P",
             panCard: "BGLRM0076S",
             aadharCard: "5600 2315 6987",
             address: "Blessed 70, Near Pragathi Sports Club, Anjappa Layout, B Narayanapura, Mahadevapura, Bengaluru, Karnataka, 560048",
@@ -67,6 +71,7 @@ export const generatePdf = async (req: Request, res: Response) => {
         {
             tenantName: "Sandeep Kumar",
             landLordName: "Krishna Reddy",
+            landLordPan: "EKTYM5684P",
             panCard: "BGLRM0076S",
             aadharCard: "5600 2315 6987",
             address: "Blessed 70, Near Pragathi Sports Club, Anjappa Layout, B Narayanapura, Mahadevapura, Bengaluru, Karnataka, 560048",
@@ -78,8 +83,9 @@ export const generatePdf = async (req: Request, res: Response) => {
             amount: "13000"
         }
     ];
+    const env = process.env.NODE_ENV;
     count = count + data.length;
-    const pdfCreate = await pdf.create(template(data), {
+    const pdfCreate = await pdf.create(template(data, env), {
         height: "297mm", width: "210mm", timeout: 120000
     });
     const nameToPdf = Date.now();
