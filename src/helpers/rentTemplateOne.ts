@@ -21,7 +21,7 @@ export const template = (data: any[], env: any) => {
         } 
 
         html{
-          zoom : ${env == "PRODUCTION" ? "0.6" : ""} ;
+          zoom : ${env == "DEVELOPMENT" ? "" : "0.6"} ;
         }
 
         @media print {
